@@ -1,4 +1,5 @@
 # VM2radius
+By Vivek Santuka
 
 This script monitors vCenter for power and IP events of a VM and generates
 RADIUS requests to "authenticate" the VM with a RADIUS server like Cisco ISE.
