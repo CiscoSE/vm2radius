@@ -1,12 +1,12 @@
 # VM2radius
-By Vivek Santuka
+# By Vivek Santuka
 
 This script monitors vCenter for power and IP events of a VM and generates
 RADIUS requests to "authenticate" the VM with a RADIUS server like Cisco ISE.
 If ISE is configured to assign SGTs they can then be used in an upstream firewall
 to filter based on SGTs. 
 
-The authentication is simulated just like a MAB requestand does not require an
+The authentication is simulated just like a MAB request and does not require an
 an user account with password. Ofcourse, the RADIUS server, Cisco ISE,
 in this case would need to be confiugred to CONTINUE processing the request
 even if the user is not found or authentication fails.
@@ -28,6 +28,10 @@ that have had an accounting start sent for previously.
 
 Lastly, VM2RADIUS requires pyrad, pyvmomi and Tinydb modules and is tested with Python 2.7
 and vCenter 6.5 and 6.7.
+
+Example use:
+
+python vm2radius.py -s vCenter.domain -u vcenter-use -p vcenter-pass -r ise.domain -k radius-secret
 
 Free to copy, edit and use with proper credit
 
